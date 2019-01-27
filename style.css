@@ -39,11 +39,16 @@
 	background: linear-gradient(to top, #CCC 5%, #E0E0E0, #EEEEEE 70%);
 	position: absolute;
 	top: 0;
-	left: 0;
 	z-index: 0;
 	border: none;
 	height: 15px;
 	width: 0;
+}
+.slider__fill--left {
+	left: 0;
+}
+.slider__fill--right {
+	right: 0;
 }
 .slider__thumb {
 	width: 10px;

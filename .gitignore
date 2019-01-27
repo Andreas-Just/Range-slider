@@ -1,7 +1,7 @@
+.gitignore
+.idea
 /node_modules/
 /.git/
-/.gitignore/
-/.idea/
 /*.log/
 /**/package-lock.json
 /**/Thumbs.db

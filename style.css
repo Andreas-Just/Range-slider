@@ -33,14 +33,23 @@
 	transition: 0.1s;
 	animation: move 2s infinite linear;
 }
-.slider__container--gray {
+.slider__fill {
+	border-radius: inherit;
 	background: #E0E0E0;
 	background: linear-gradient(to top, #CCC 5%, #E0E0E0, #EEEEEE 70%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	border: none;
+	height: 15px;
+	width: 0;
 }
 .slider__thumb {
 	width: 10px;
 	height: 25px;
 	border-radius: 3px;
+	/*border: 1px solid white;*/
 	position: absolute;
 	top: -5px;
 	background: darkgreen;

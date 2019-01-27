@@ -1,6 +1,6 @@
 .gitignore
-.idea
 /node_modules/
+/.idea/
 /.git/
 /*.log/
 /**/package-lock.json

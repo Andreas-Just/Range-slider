@@ -1,8 +1,5 @@
-.gitignore
 /node_modules/
 /.idea/
 /.git/
-/*.log/
-/**/package-lock.json
 /**/Thumbs.db
 /**/*.DS_Store

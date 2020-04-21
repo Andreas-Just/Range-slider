@@ -1,76 +1,75 @@
 .slider {
-	width: 600px;
-	height: 200px;
-	margin: auto;
-	background-color: lightgoldenrodyellow;
-	border: 1px solid burlywood;
+  width: 600px;
+  height: 200px;
+  margin: auto;
+  background-color: lightgoldenrodyellow;
+  border: 1px solid burlywood;
 }
 .range {
-	display: flex;
-	justify-content: space-between;
-	width: 310px;
-	margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 310px;
+  margin: 30px auto;
 }
 .range__value {
-	width: 50px;
-	padding: 7px 10px 9px;
-	font-size: 18px;
-	font-family: 'Georgia', serif;
-	text-align: center;
-	background-color: white;
-	border: 1px solid burlywood;
+  width: 50px;
+  padding: 7px 10px 9px;
+  font-size: 18px;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background-color: white;
+  border: 1px solid burlywood;
 }
 .slider__container {
-	position: relative;
-	border-radius: 10px;
-	width: 310px;
-	height: 15px;
-	margin: 50px auto;
-	border: 1px solid #999;
-	background: repeating-linear-gradient(45deg,
-	floralwhite, floralwhite 15px, darkgoldenrod 0, darkgoldenrod 30px);
-	background-size: 35px 43px;
-	transition: 0.1s;
-	animation: move 2s infinite linear;
+  position: relative;
+  border-radius: 10px;
+  width: 310px;
+  height: 15px;
+  margin: 50px auto;
+  border: 1px solid #999;
+  background: repeating-linear-gradient(45deg,
+  floralwhite, floralwhite 15px, darkgoldenrod 0, darkgoldenrod 30px);
+  background-size: 35px 43px;
+  transition: 0.1s;
+  animation: move 2s infinite linear;
 }
 .slider__fill {
-	border-radius: inherit;
-	background: #E0E0E0;
-	background: linear-gradient(to top, #CCC 5%, #E0E0E0, #EEEEEE 70%);
-	position: absolute;
-	top: 0;
-	z-index: 0;
-	border: none;
-	height: 15px;
-	width: 0;
+  border-radius: inherit;
+  background: #E0E0E0;
+  background: linear-gradient(to top, #CCC 5%, #E0E0E0, #EEEEEE 70%);
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  border: none;
+  height: 15px;
+  width: 0;
 }
 .slider__fill--left {
-	left: 0;
+  left: 0;
 }
 .slider__fill--right {
-	right: 0;
+  right: 0;
 }
 .slider__thumb {
-	width: 10px;
-	height: 25px;
-	border-radius: 3px;
-	/*border: 1px solid white;*/
-	position: absolute;
-	top: -5px;
-	background: darkgreen;
-	cursor: pointer;
+  width: 10px;
+  height: 25px;
+  border-radius: 3px;
+  position: absolute;
+  top: -5px;
+  background: darkgreen;
+  cursor: pointer;
 }
 .slider__thumb--left {
-	left: 10px;
+  left: 10px;
 }
 .slider__thumb--right {
-	right: 10px;
+  right: 10px;
 }
 @keyframes move {
-	from {
-		background-position-x: 0;
-	}
-	to {
-		background-position-x: 35px;
-	}
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 35px;
+  }
 }

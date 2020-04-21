@@ -1,5 +1,13 @@
 'use strict';
 
+CreateSlider.prototype._onThumbMouseDown = function(event) {
+  if (event.target === this._thumbElementLeft) {
+    document.addEventListener('mousemove', this._mouseMoveForSlider);
+    document.addEventListener('mouseup', this._mouseUpForSlider);
+  } else {
+    event.target.addEventListener('click', this._clickMoveOnSlider);
+  }
+};
 
 CreateSlider.prototype._onThumbClickMove = function(event) {
   this._xThumbLeft = event.clientX - this._containerPosition.x  - this._thumbElementLeft.clientWidth / 2;

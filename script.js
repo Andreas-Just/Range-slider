@@ -12,8 +12,8 @@ CreateSlider.prototype._onThumbMouseDown = function(event) {
 CreateSlider.prototype._onThumbClickMove = function(event) {
   this._xThumbLeft = event.clientX - this._containerPosition.x  - this._thumbElementLeft.clientWidth / 2;
 
-  this._thumbElementLeft.style.left = this._xThumbLeft + 'px';
-  this._fillElementLeft.style.width =  parseInt(this._thumbElementLeft.style.left) + 5 + 'px';
+  this._thumbElementLeft.style.left = `${this._xThumbLeft}px`;
+  this._fillElementLeft.style.width =  `${parseInt(this._thumbElementLeft.style.left) + 5}px`;
 };
 
 CreateSlider.prototype._onDocumentMousemove = function(event) {
@@ -28,8 +28,8 @@ CreateSlider.prototype._onDocumentMousemove = function(event) {
     this._xThumbLeft = maxX;
   }
 
-  this._thumbElementLeft.style.left = this._xThumbLeft + 'px';
-  this._fillElementLeft.style.width =  parseInt(this._thumbElementLeft.style.left) + 5 + 'px';
+  this._thumbElementLeft.style.left = `${this._xThumbLeft}px`;
+  this._fillElementLeft.style.width =  `${parseInt(this._thumbElementLeft.style.left) + 5}px`;
 };
 
 CreateSlider.prototype._onDocumentMouseup = function() {
@@ -69,8 +69,14 @@ function CreateSlider(sliderElement) {
 
   // this._xThumbLeft = this._thumbElementLeftPosition.x - this._thumbElementLeft.clientWidth / 2;
   // this._xThumbRight = this._thumbElementRightPosition.x - this._thumbElementRight.clientWidth / 2;
-  this._fillElementLeft.style.width = this._thumbElementLeftPosition.x - this._containerPosition.x + 5 + 'px';
-  this._fillElementRight.style.width = this._containerPosition.x + this._containerElement.clientWidth - this._thumbElementRightPosition.x - 5 + 'px';
+  this._fillElementLeft.style.width = `${
+    this._thumbElementLeftPosition.x - this._containerPosition.x + 5
+  }px`;
+  this._fillElementRight.style.width = `${
+    this._containerPosition.x + 
+    this._containerElement.clientWidth - 
+    this._thumbElementRightPosition.x - 5
+  }px`;
 
   this._containerElement.addEventListener('mousedown', this._mouseDownForSlider);
 }
